@@ -1,0 +1,41 @@
+@import '../../style/variables';
+.banner-ad {
+    padding: 55px 26px;
+    position: relative;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-bottom: 1px solid;
+    border-color: $cl-border;
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        transform: opacity 0.3s ease;
+
+    }
+
+    &__txt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 22px;
+        color: $cl-pri;
+        padding: 4% 10%;
+        border: 1px solid;
+        pointer-events: none;
+    }
+
+    @media screen and (min-width: $screen-xs) {
+        padding: 55px 66px;
+
+        &__txt {
+            font-size: 32px;
+        }
+
+    }
+}

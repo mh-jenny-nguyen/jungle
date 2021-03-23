@@ -1,0 +1,58 @@
+@import '../../style/variables';
+.about-author {
+    padding: 55px 0;
+    border-top: 1px solid;
+    border-color: $cl-border;
+    
+    &__pushlished {
+        margin: 0;
+    }
+    
+    &__info {
+        margin-top: 40px;
+    }
+    
+    &__avatar {
+        img {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+        }
+    }
+    
+    &__desc {
+        max-width: 80%;
+        text-align: center;
+        margin: auto;
+        margin-top: 25px;
+        line-height: 1.713;
+        font-size: 14px;
+    }
+    
+    @media screen and (min-width: $screen-sm) {
+        
+        &__info {
+            display: flex;
+        }
+        
+        &__avatar {
+          width: 100px;
+           
+            img {
+                display: block;
+                width: 100%;
+                max-width: 100px;
+            }
+            
+        }
+        
+        &__desc {
+            width: calc(100% - 32px - 100px);
+            text-align: left;
+            margin-top: 0;
+            margin-left: 32px;
+        }
+    }
+}

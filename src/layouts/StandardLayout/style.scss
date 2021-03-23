@@ -1,0 +1,84 @@
+@import '../../style/variables';
+
+.layout-masonry .page-content {
+    display: flex;
+    flex-direction: column;
+
+    .sidebar {
+        width: 100%;
+        padding: 45px 45px;
+        text-align: center;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-image: url('../../assets/img/tobias-tullius-PXXtq6bp6cs-unsplash-min.jpg');
+        z-index: 5;
+        
+        .toogle-buttons {
+            align-self: flex-start;
+        }
+        
+        .site-header {
+            flex-grow: 1;
+        }
+    }
+    
+    .content {
+        width: 100%;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        flex-direction: row;
+
+        .content {
+            width: 65%;
+            margin-left: 35%;
+        }
+
+        .sidebar {
+            width: 35%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+}
+
+.layout-masonry .content-container {
+    padding: 0 26px 35px 26px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-bottom: 1px solid $cl-border;
+
+    @media screen and (min-width: 576px){
+        padding: 0 66px 55px 66px;
+    }
+
+}
+
+.layout-masonry .widget-area {
+    padding: 55px 26px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .widget {
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 100%;
+    }
+    
+    @media screen and (min-width: $screen-sm) {
+        .widget {
+           width: calc(50% - 32px);
+        }
+    }
+
+    @media screen and (min-width: $screen-xs) {
+        padding: 55px 66px;
+    }
+}

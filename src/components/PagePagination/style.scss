@@ -1,0 +1,49 @@
+@import '../../style/variables';
+.page-navigation {
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-color: $cl-border;
+        padding: 45px 0;
+    }
+
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        width: 43px;
+        height: 43;
+        line-height: 43px;
+        text-align: center;
+        background: $cl-white;
+        color: $cl-black;
+        border-radius: 100%;
+        text-decoration: none;
+        margin-left: 3px;
+        margin-right: 3px;
+        cursor: pointer;
+        
+        &:hover,
+        &.--current {
+            background-color: $cl-pri;
+            color: $cl-white;
+
+            i {
+                color: $cl-white;
+            }
+        }
+
+        i {
+            color: $cl-black;
+        }
+
+    }
+
+    &__wrapper {
+        @media screen and (min-width: $screen-xs) {
+            padding: 55px 0;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@import '../../style/variables';
+.top-nav {
+    &__wrapper {
+        padding: 20px 15px;
+        border-bottom: 1px solid $cl-border;
+    }
+    
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    &__item {
+        margin: 5px 10px;
+        position: relative;
+        a {
+            text-decoration: none;
+            color: $cl-black;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            
+            &:hover {
+                color: $cl-pri;
+            }
+        }
+        
+        &::after {
+            content: "";
+            width: 4px;
+            height: 4px;
+            background-color: $cl-pri;
+            display: block;
+            border-radius: 50%;
+            top: 50%;
+            transform: translatey(-50%);
+            position: absolute;
+            right: -10px;
+        }
+        
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    
+    @media screen and (min-width: $screen-xs) {
+        &__item {
+            margin: 10px 15px;
+        }
+    }
+
+    
+    @media screen and (min-width: $screen-md) {
+        &__item {
+            margin: 15px 20px;
+            a {
+                font-size: 12px;
+            }
+            
+            &::after {
+                right: -16px;
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }   
+}

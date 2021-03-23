@@ -1,0 +1,24 @@
+@import '../../style/variables';
+.page-header {
+    padding: 45px 26px 35px 26px;
+    text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    
+    &__title {
+        font-weight: 300;
+        font-size: 38px;
+        margin-top: 0;
+        margin-bottom: 28px;
+        line-height: 1.2;
+    }
+    
+    &__sub-title {
+        font-weight: 300;
+        line-height: 1.713;
+    }
+
+    @media screen and (min-width: $screen-xs) {
+        padding: 45px 66px 35px 66px;
+    }
+}

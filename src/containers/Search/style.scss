@@ -1,0 +1,56 @@
+@import "../../style/variables";
+.search-page {
+  .page-header__sub-title {
+    text-align: center;
+    color: $cl-pri-bold;
+    font-size: 18px;
+    margin-top: -20px;
+    margin-bottom: -30px;
+  }
+
+  .posts {
+    padding: 55px 26px;
+  }
+
+  .page-header__title {
+    font-size: 28px;
+  }
+
+  .not-found {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 18px;
+      text-align: center;
+      padding: 15px 40px;
+      background-color: #aaa;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+	.posts {
+		padding: 55px 66px;
+	}
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    .page-header__sub-title {
+      margin-bottom: -10px;
+    }
+
+    .page-header__title {
+      font-size: 32px;
+    }
+
+    .not-found {
+      min-height: 300px;
+
+      span {
+        font-size: 22px;
+      }
+    }
+  }
+}

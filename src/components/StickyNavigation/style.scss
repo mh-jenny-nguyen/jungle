@@ -1,0 +1,80 @@
+@import '../../style/variables';
+.nav-sidebar {
+    display: block !important;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.4s linear;
+    
+    &.--hidden {
+        z-index: -1;
+        opacity: 0;
+    }
+    
+    &__close {
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        cursor: pointer;
+        
+        svg {
+            font-size: 22px;
+            color: $cl-white;
+            pointer-events: none;
+        }
+        
+        &:hover svg {
+            color: $cl-pri;
+        }
+    }
+    
+    &__container {
+        height: 100%;
+        width:  100vw;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__container {
+        background-color: $cl-black;
+        opacity: .8;
+    }
+    
+    &__list {
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    &__item {
+        padding: 10px;
+        text-align: center;
+        
+        a {
+            font-size: 24px;
+            text-decoration: none;
+            color: $cl-white;
+            transition: color 0.3s linear;
+            
+            &:hover {
+                color: $cl-pri;
+            }
+        }
+    } 
+
+    @media screen and (min-width: $screen-sm) {
+    	width: 35%;
+
+    	&__container {
+    		width: 100%;
+    	}
+    }
+}

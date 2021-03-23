@@ -1,0 +1,26 @@
+@import '../../style/variables';
+.loading {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    
+    img {
+        width: 50px;
+        height: auto;
+        display: block;
+    }
+    
+    h3 {
+        font-size: 14px;
+            font-weight: 300;
+        width: 100%;
+    }
+    
+    @media screen and (min-width: $screen-xs) {
+        min-height: 500px;
+    }
+}

@@ -1,0 +1,80 @@
+@import "../../style/variables";
+.post {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+
+  &__thumbnail {
+    width: 100%;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__badges {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background: #d3c4a6;
+    padding: 8px 11px 8px 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 10px;
+    color: #fff;
+  }
+
+  &__entry-title {
+    margin-bottom: 5px;
+    padding: 0 5%;
+    a {
+      font-size: 26px;
+      line-height: 1.318;
+      color: $cl-black;
+      text-decoration: none;
+      font-weight: 300;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__cat {
+    font-size: 12px;
+    color: $cl-pri-bold;
+    margin: 0 5px;
+    font-style: italic;
+  }
+
+  &__date {
+    font-size: 12px;
+    color: $cl-gray;
+    margin: 0 5px;
+    font-style: italic;
+  }
+
+  &__entry-summary {
+    margin-top: 20px;
+    p {
+      font-size: 14px;
+      line-height: 1.83;
+      font-weight: 300;
+    }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
